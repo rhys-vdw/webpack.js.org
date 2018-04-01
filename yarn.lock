@@ -324,9 +324,9 @@ assert@^1.1.1:
   dependencies:
     util "0.10.3"
 
-assetgraph@^4.0.5:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/assetgraph/-/assetgraph-4.1.0.tgz#08c65b669b5437a3eaa5bcb563eb39f09d6364a1"
+assetgraph@^4.3.1:
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/assetgraph/-/assetgraph-4.3.1.tgz#b93239104d6ce2ff22d25822c369460c9b9b1d40"
   dependencies:
     bluebird "^3.5.1"
     capitalize "^1.0.0"
@@ -337,6 +337,7 @@ assetgraph@^4.0.5:
     css-font-weight-names "0.2.1"
     css-list-helpers "1.0.1"
     cssnano "^4.0.0-rc.2"
+    data-urls "^1.0.0"
     esanimate "^1.1.0"
     escodegen "^1.9.1"
     esprima "^4.0.0"
@@ -2145,6 +2146,14 @@ dashdash@^1.12.0:
   dependencies:
     assert-plus "^1.0.0"
 
+data-urls@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/data-urls/-/data-urls-1.0.0.tgz#24802de4e81c298ea8a9388bb0d8e461c774684f"
+  dependencies:
+    abab "^1.0.4"
+    whatwg-mimetype "^2.0.0"
+    whatwg-url "^6.4.0"
+
 date-now@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/date-now/-/date-now-0.1.4.tgz#eaf439fd4d4848ad74e5cc7dbef200672b9e345b"
@@ -3806,17 +3815,16 @@ https-proxy-agent@^1.0.0:
     debug "2"
     extend "3"
 
-"hyperlink@github:Munter/hyperlink#65a8626":
+"hyperlink@github:Munter/hyperlink#df1d439":
   version "3.0.1"
-  resolved "https://codeload.github.com/Munter/hyperlink/tar.gz/65a8626e7d1bde11fc66c9e1489ac9eab98a4f2a"
+  resolved "https://codeload.github.com/Munter/hyperlink/tar.gz/df1d4397aa9938fbee21ef8065df644a9d2a787a"
   dependencies:
-    assetgraph "^4.0.5"
+    assetgraph "^4.3.1"
     async "^2.6.0"
-    lodash "^4.17.4"
     optimist "^0.6.1"
     pretty-bytes "^4.0.2"
     request "^2.83.0"
-    tap-render Munter/tap-render#0.1.7-patch1
+    tap-render Munter/tap-render#0.1.7-patch3
     urltools "^0.3.1"
 
 iconv-lite@0.4.19, iconv-lite@^0.4.17, iconv-lite@~0.4.13:
@@ -7956,12 +7964,29 @@ tap-parser@^6.0.1:
     js-yaml "^3.2.7"
     minipass "^2.2.0"
 
-tap-render@Munter/tap-render#0.1.7-patch1:
+tap-parser@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/tap-parser/-/tap-parser-7.0.0.tgz#54db35302fda2c2ccc21954ad3be22b2cba42721"
+  dependencies:
+    events-to-array "^1.0.1"
+    js-yaml "^3.2.7"
+    minipass "^2.2.0"
+
+tap-render@Munter/tap-render#0.1.7-patch3:
   version "0.1.7"
-  resolved "https://codeload.github.com/Munter/tap-render/tar.gz/35bf3ac21c4fd2776d8569d5e8a1ab62df1f6d4f"
+  resolved "https://codeload.github.com/Munter/tap-render/tar.gz/5731da914f657b5baeb1a4e801b818abd7ee114d"
   dependencies:
     jsonify "0.0.0"
     pause-stream "0.0.7"
+
+tap-spot@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/tap-spot/-/tap-spot-1.0.0.tgz#68604c688c2b33749be5123e0cccf45479739d33"
+  dependencies:
+    chalk "^2.3.2"
+    duplexer "^0.1.1"
+    tap-parser "^7.0.0"
+    through2 "^2.0.1"
 
 tapable@^0.2.7:
   version "0.2.8"
@@ -8020,7 +8045,7 @@ text-table@~0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
 
-through2@^2.0.0, through2@^2.0.3, through2@~2.0.0:
+through2@^2.0.0, through2@^2.0.1, through2@^2.0.3, through2@~2.0.0:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/through2/-/through2-2.0.3.tgz#0004569b37c7c74ba39c43f3ced78d1ad94140be"
   dependencies:
@@ -8795,6 +8820,10 @@ whatwg-encoding@^1.0.1, whatwg-encoding@^1.0.3:
 whatwg-fetch@>=0.10.0, whatwg-fetch@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-2.0.3.tgz#9c84ec2dcf68187ff00bc64e1274b442176e1c84"
+
+whatwg-mimetype@^2.0.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/whatwg-mimetype/-/whatwg-mimetype-2.1.0.tgz#f0f21d76cbba72362eb609dbed2a30cd17fcc7d4"
 
 whatwg-url@^6.4.0:
   version "6.4.0"
